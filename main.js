@@ -19,6 +19,16 @@ function confirm(x,y,z){
         </div>
         </div>`
     )}
+function pop(){
+    for(let i=0;i<boards.length;i++){
+        let TE =i+1
+        Domselectors.board.insertAdjacentHTML(
+            "beforeend",
+            `<div class="eachthing" id="card${TE.toString()}">
+            <h3 class="poopy">${boards[i]}</h3>
+            </div>`
+        )}
+}
 function choices(){
 Domselectors.imgs.forEach((el)=> el.addEventListener("click", function(event){
     Domselectors.select.innerHTML = ""
@@ -36,10 +46,11 @@ Domselectors.imgs.forEach((el)=> el.addEventListener("click", function(event){
     }
     event.preventDefault()
     confirm(boom,y,z)
-    yesno(boom, test    )
+    main(boom)
 }))}
 choices()
-function yesno(x,y){
+
+function main(x){
     let tada = ""
     let move = ""
     if(x=== "circle"){
@@ -50,7 +61,6 @@ function yesno(x,y){
     if(move === "player"){
         Domselectors.select.classList.add("player")
         Domselectors.select.classList.remove("computer")
-        console.log(move)     
     }else if(move==="computer"){
         Domselectors.select.classList.add("computer")
         Domselectors.select.classList.remove("player")
@@ -71,31 +81,44 @@ function yesno(x,y){
                 'beforeend',
                 `<h4>It is ${tada} turn</h4>`
         )
-        let ha =""
-        for(let i=0;i<boards.length;i++){
-            let TE =i+1
-            Domselectors.board.insertAdjacentHTML(
-                "beforeend",
-                `<div class="eachthing" id="card${TE.toString()}">
-                <h3 class="poopy">${boards[i]}</h3>
-                </div>`
-            )}
-        let thoa = document.querySelectorAll(".eachthing")   
-    thoa.forEach((el)=>el.addEventListener('click', function(){
-        while(move==="player"){
+        pop()
+        let thoa = document.querySelectorAll(".eachthing") 
+    if(move==="player"){
+    thoa.forEach((el)=>el.addEventListener('click', function(){ 
         move="computer"
         let bla = this.id
         let blahh = bla.split("d")
         let index = blahh[1]-1
-        console.log(boards[index])
-        
-       /*  this.insertAdjacentHTML(
-            "beforeend",
-            `<img src=${y} class="imga" id="test">`
-            ) */
-        console.log(move)
-    }
-    }))
-        })
+        let replace = ""
+        if(x==="circle"){
+            replace = "o"
+        }else{
+            replace ="x"
+        }
+        boards[index]= replace
+        Domselectors.board.innerHTML=""
+        pop()        
     
+}))} 
+if(move==="computer"){
+let int = Math.floor(Math.random() * 9);
+let haha = boards[int]
+let replace = ""
+console.log(int)
+console.log(haha)
+if(haha===" "){
+    if(x==="circle"){
+        replace ="x"
+    }else{
+        replace="o"
+    }
+    haha=replace
+    Domselectors.board.innerHTML=""
+    pop()
 }
+}
+
+})   
+
+}
+
