@@ -4,8 +4,10 @@ const Domselectors = {
     select: document.querySelector(".selection"),
     yesbtn: document.querySelector(".yes"),
     nobtn: document.querySelector(".no"),
+    se: document.querySelectorAll(".poopy")
 }
-let boards = [" "," "," "," "," "," "," ", " "," ",]
+
+let boards = [" "," "," "," "," "," "," ", " "," ",]    
 function confirm(x,y,z){
     Domselectors.select.insertAdjacentHTML(
         "beforeend",
@@ -24,6 +26,7 @@ Domselectors.imgs.forEach((el)=> el.addEventListener("click", function(event){
     let boom = this.id;
     let y = 0
     let z=""
+    let test = this.src
     if(this.id === "circle"){
         y=1
         z="st"
@@ -33,10 +36,10 @@ Domselectors.imgs.forEach((el)=> el.addEventListener("click", function(event){
     }
     event.preventDefault()
     confirm(boom,y,z)
-    yesno(boom)
+    yesno(boom, test    )
 }))}
 choices()
-function yesno(x){
+function yesno(x,y){
     let tada = ""
     let move = ""
     if(x=== "circle"){
@@ -68,20 +71,31 @@ function yesno(x){
                 'beforeend',
                 `<h4>It is ${tada} turn</h4>`
         )
+        let ha =""
         for(let i=0;i<boards.length;i++){
-            let x =i+1           
+            let TE =i+1
             Domselectors.board.insertAdjacentHTML(
                 "beforeend",
-                `<div class="eachthing" id="card${x.toString()}">
+                `<div class="eachthing" id="card${TE.toString()}">
                 <h3 class="poopy">${boards[i]}</h3>
                 </div>`
             )}
-        let thoa = document.querySelectorAll(".eachthing")
-   while(move==="player"){
+        let thoa = document.querySelectorAll(".eachthing")   
     thoa.forEach((el)=>el.addEventListener('click', function(){
+        while(move==="player"){
         move="computer"
+        let bla = this.id
+        let blahh = bla.split("d")
+        let index = blahh[1]-1
+        console.log(boards[index])
+        
+       /*  this.insertAdjacentHTML(
+            "beforeend",
+            `<img src=${y} class="imga" id="test">`
+            ) */
         console.log(move)
-    }))}
+    }
+    }))
         })
     
 }
