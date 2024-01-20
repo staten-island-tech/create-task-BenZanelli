@@ -1,0 +1,149 @@
+h1{
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    width: 20%;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #2f3640;
+    border: 5px solid #222;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+            rgba(0, 0, 0, 0.23) 0px 6px 6px,
+            inset rgba(0, 0, 0, 0.19) 0px 10px 20px,
+            inset rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: all ease-in-out 0.3s;
+    overflow: hidden;
+    color: white;
+    font-size: 1.6rem;
+    margin-bottom: 50px;
+}
+h1:hover {
+    box-shadow: rgba(193, 44, 223, 0.19) 0px 10px 20px,
+            rgba(193, 44, 223, 0.23) 0px 6px 6px,
+            inset rgba(0, 0, 0, 0.19) 0px 10px 20px,
+            inset rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border: 5px solid #b671d6;
+  }
+.searchBox {
+    display: flex;
+    width: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    background: #2f3640;
+    border-radius: 50px;
+    position: relative;
+    margin-bottom: 50px;
+    border: 5px solid #222;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+            rgba(0, 0, 0, 0.23) 0px 6px 6px,
+            inset rgba(0, 0, 0, 0.19) 0px 10px 20px,
+            inset rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: all ease-in-out 0.3s;
+  }
+.searchBox:hover {
+    box-shadow: rgba(193, 44, 223, 0.19) 0px 10px 20px,
+            rgba(193, 44, 223, 0.23) 0px 6px 6px,
+            inset rgba(0, 0, 0, 0.19) 0px 10px 20px,
+            inset rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border: 5px solid #b671d6;
+  }
+  .searchButton {
+    color: white;
+    position: absolute;
+    right: 8px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--gradient-2, linear-gradient(90deg, #2AF598 0%, #009EFD 100%));
+    border: 0;
+    display: inline-block;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  }
+  /*hover effect*/
+  button:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+    transform: translateY(-3px);
+  }
+  /*button pressing effect*/
+  button:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+  
+  .searchInput {
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    width: 60%;
+    padding: 24px 4px 24px 22px;
+    overflow: scroll;
+  }
+  
+  .card {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    width: 30%;
+    height: 20vh;
+    box-sizing: border-box;
+    background-color: #2f3640;
+    border: 5px solid #222;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+            rgba(0, 0, 0, 0.23) 0px 6px 6px,
+            inset rgba(0, 0, 0, 0.19) 0px 10px 20px,
+            inset rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: all ease-in-out 0.3s;
+    overflow: scroll;
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+  }
+  
+  .card:hover {
+    box-shadow: rgba(193, 44, 223, 0.19) 0px 10px 20px,
+            rgba(193, 44, 223, 0.23) 0px 6px 6px,
+            inset rgba(0, 0, 0, 0.19) 0px 10px 20px,
+            inset rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border: 5px solid #b671d6;
+  }
+.word-name{
+    margin-bottom: -10px;
+
+}
+.ptspeech{
+    margin-bottom: -10px;
+}
+#history{
+    width: 10%;
+    text-align: center;
+}
+h5{
+    font-size: 1.1rem;
+    text-decoration: underline;
+    margin-top: -3px;
+    margin-bottom: -3px;
+}
+.wordhist{
+    overflow: scroll;
+    position: relative;
+    
+}
