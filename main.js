@@ -80,7 +80,7 @@ function popHist(){
         //inserts word history
         DOMSelectors.wordhist.insertAdjacentHTML(
             'beforeend',
-            `<h6 class="wordhist" id=${history[i].toLowerCase()}>${history[i]}</h6>`
+            `<h6 class="word" id=${history[i].toLowerCase()}>${history[i]}</h6>`
         
     )}
 }

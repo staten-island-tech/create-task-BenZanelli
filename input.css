@@ -112,8 +112,7 @@ h1:hover {
             inset rgba(0, 0, 0, 0.19) 0px 10px 20px,
             inset rgba(0, 0, 0, 0.23) 0px 6px 6px;
     transition: all ease-in-out 0.3s;
-    overflow: scroll;
-    color: white;
+      color: white;
     font-size: 1.2rem;
     margin-bottom: 50px;
   }
@@ -143,7 +142,7 @@ h5{
     margin-bottom: -3px;
 }
 .wordhist{
-    overflow: scroll;
+    overflow-y: scroll;
     position: relative;
     
 }
