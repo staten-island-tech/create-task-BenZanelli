@@ -32,7 +32,7 @@ async function insert(x){
             `
             <h2 class="word-name">${word.word.toUpperCase()}</h2>
             <h3 class="ptspeech">${word.meanings[0].partOfSpeech.toUpperCase()}</h3>
-            <h4 class="def">${word.meanings[0].definitions[0].definition}</h4>
+            <p class="def">${word.meanings[0].definitions[0].definition}</p>
             `
         )
         //adds data to history array, places on screen

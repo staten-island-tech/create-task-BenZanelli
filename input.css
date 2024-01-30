@@ -115,6 +115,7 @@ h1:hover {
       color: white;
     font-size: 1.2rem;
     margin-bottom: 50px;
+
   }
   
   .card:hover {
@@ -145,4 +146,7 @@ h5{
     overflow-y: scroll;
     position: relative;
     
+}
+.main{
+  overflow-y: scroll;
 }
